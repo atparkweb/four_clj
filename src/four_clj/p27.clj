@@ -4,4 +4,6 @@
 ; Hint: "racecar" does not equal '(\r \a \c \e \c \a \r)
 
 (defn palindrome-detector [s]
-  (= (reverse s) s))
+  (= (reverse s) (reverse (reverse s))))
+
+(palindrome-detector "racecar")
