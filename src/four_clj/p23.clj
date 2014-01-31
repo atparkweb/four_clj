@@ -6,7 +6,5 @@
 ;    `reverse`
 ;    `rseq`
 
-; TODO: implement reverse-a-sequence
-
 (defn reverse-a-sequence [s]
-  (throw (Exception. "Not Implemented")))
+  (reduce conj '() s))
