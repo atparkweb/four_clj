@@ -5,5 +5,3 @@
 
 (defn palindrome-detector [s]
   (= (reverse s) (seq s)))
-
-(palindrome-detector "racecar")
