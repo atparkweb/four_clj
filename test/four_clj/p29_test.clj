@@ -13,4 +13,4 @@
 
 (deftest get-the-caps-3
   (testing "get-the-caps-3"
-    (is (= (get-the-caps"$#A(*&987Zf") "AZ"))))
+    (is (= (get-the-caps "$#A(*&987Zf") "AZ"))))
