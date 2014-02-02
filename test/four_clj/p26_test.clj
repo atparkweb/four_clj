@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [four-clj.p26 :refer :all]))
 
+
 (deftest n-fibonacci-1
   (testing "n-fibonacci-1"
     (is (= (n-fibonacci 3) '(1 1 2)))))

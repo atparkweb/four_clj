@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [four-clj.p27 :refer :all]))
 
+
 (deftest test-palindrome-detector-1
   (testing "palindrome-detector:1"
     (is (false? (palindrome-detector '(1 2 3 4 5))))))

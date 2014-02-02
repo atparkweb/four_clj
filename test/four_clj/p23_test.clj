@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [four-clj.p23 :refer :all]))
 
+
 (deftest reverse-a-sequence-1
   (testing "Reverse-a-sequence:1"
     (is (= (reverse-a-sequence [1 2 3 4 5]) [5 4 3 2 1]))))
