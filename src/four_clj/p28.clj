@@ -4,6 +4,11 @@
 
 ; RESTRICTIONS: Can't use `flatten`
 
-; TODO: Implement flatten-seq
 (defn flatten-seq [s]
-  (throw (Exception. "Not implemented")))
+  (let [l (first s) r (next s)]
+    (concat
+     (if (sequential? l)
+       (flatten-seq l)
+       [l])
+     (when (sequential? r)
+       (flatten-seq r)))))
