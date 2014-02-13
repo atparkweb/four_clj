@@ -5,4 +5,4 @@
 ; TODO: Implement factorial function
 
 (defn factorial [n]
-  (throw (Exception. "Not implemented")))
+  (reduce * (range 1 (inc n))))
