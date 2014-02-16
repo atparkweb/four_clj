@@ -3,7 +3,4 @@
 ; Write a function which removes consecutive duplicates from a sequence.
 
 (defn compress-seq [coll]
-  (when-let [[x & y] (seq coll)]
-    (if (= x (first y))
-      (compress-seq y)
-      (cons x (compress-seq y)))))
+  (reduce #(if (= (last %1) %2) %1 (conj %1 %2)) []))
