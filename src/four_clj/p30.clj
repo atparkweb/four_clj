@@ -2,5 +2,8 @@
 
 ; Write a function which removes consecutive duplicates from a sequence.
 
-(defn compress-seq [s]
-  (throw (Exception. "Not implemented.")))
+(defn compress-seq [coll]
+  (when-let [[x & y] (seq coll)]
+    (if (= x (first y))
+      (compress-seq y)
+      (cons x (compress-seq y)))))
