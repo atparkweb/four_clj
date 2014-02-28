@@ -1,5 +1,5 @@
 (ns four-clj.p41-test
-  (require [clojure.test :refer :all]
+  (:require [clojure.test :refer :all]
            [four-clj.p41 :refer :all]))
 
 
