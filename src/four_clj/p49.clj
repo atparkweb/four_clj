@@ -5,4 +5,4 @@
 ; SPECIAL RESTRICTIONS: split-at
 
 (defn split-seq [n coll]
-  (throw (Exception. "Not implemented")))
+  (list (take n coll) (drop n coll)))
