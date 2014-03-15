@@ -9,5 +9,9 @@
 ;   x > y → :gt
 ;   x < y → :lt
 
-(defn comparison-ops [less-that-op a b]
-  (throw (.Exception "Not implemented")))
+(defn comparison-ops [lt x y]
+  (if (lt x y)
+    :lt
+    (if (lt y x)
+      :gt
+      :eq)))
