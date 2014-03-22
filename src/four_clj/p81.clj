@@ -6,4 +6,6 @@
 ; SPECIAL RESTRICTION: intersection
 
 (defn set-intersection [s1 s2]
-  (set (filter #(contains? s1 %) s2)))
+  (set (filter s1 s2)))
+
+; Better: (comp set filter)
