@@ -6,5 +6,18 @@
 
 ; Special Restrictions: iterate
 
-(defn my-iterate [f n]
-  (throw (.Exception "Not Implemented")))
+;(defn my-iterate [f n]
+;  )
+
+(defn defer-expensive [cheap expensive]
+  (if-let [good-enough (force cheap)]
+    good-enough
+    (force expensive)))
+
+(defer-expensive
+  (delay :cheap)
+  (delay (do (Thread/sleep 5000) :expensive)))
+
+(defer-expensive
+  (delay false)
+  (delay (do (Thread/sleep 5000) :expensive)))
