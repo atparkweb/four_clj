@@ -2,5 +2,5 @@
 
 ; Write a function which multiplies two numbers and returns the result as a sequence of its digits.
 
-(defn product-digits [n]
-  (throw (Exception. "Not implemented")))
+(defn product-digits [x y]
+  (map (comp read-string str) (str (* x y))))
